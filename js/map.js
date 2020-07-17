@@ -31,8 +31,8 @@ document.querySelector('a-scene').addEventListener('render-target-loaded', () =>
         wall.setAttribute('width', WALL_SIZE);
         wall.setAttribute('height', WALL_HEIGHT);
         wall.setAttribute('depth', WALL_SIZE);
-        wall.setAttribute('color', '#fff');
-        wall.setAttribute('material', 'src: #walls; repeat: 2 2')
+        wall.setAttribute('color', 'red');
+        wall.setAttribute('material', 'src: #wall; repeat: 2 2')
         wall.setAttribute('position', position);
       }
     }
