@@ -11,9 +11,9 @@ const animate = () => {
   const color = `hsl(${hue}, 100%, 50%)`;
   $('a-sphere').setAttribute('color', color);
 
-  // const position = `0 ${1.5 + Math.sin(Date.now() / 1000)} -2`;
-  // $('a-sphere').setAttribute('position', position);
-  // requestAnimationFrame(animate);
+  const position = `0 ${1.5 + Math.sin(Date.now() / 1000)} -2`;
+  $('a-sphere').setAttribute('position', position);
+  requestAnimationFrame(animate);
 
 };
 
