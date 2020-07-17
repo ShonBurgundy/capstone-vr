@@ -19,23 +19,29 @@
   </head>
   <body>
 
-    <a-scene> <!-- environment="preset:forest" -->
+    <a-scene environment="preset:forest"> <!-- environment="preset:forest" -->
 
       <a-assets>
         <img id="walls" src="img/wall.jpg">
       </a-assets>
 
-      <a-box width=".5" height="1" depth="1"
+      <a-box width="2" height="5" depth=".2"
         position="0 0 0"
-        scale="1 2.5 1"
+        scale="1 1 1"
         src="img/wall.jpg">
       </a-box>
 
-      <a-box width=".5" height="1" depth="1"
+      <a-box width="2" height="5" depth=".2"
         position="0 0 2"
-        scale="1 2.5 1"
+        scale="1 1 1"
         src="img/wall.jpg">
       </a-box>
+
+      <a-box width="2" height="5" depth=".2"
+      position="-2 0 0"
+      scale="1 1 1"
+      src="img/wall.jpg">
+    </a-box>
       
       <a-camera position="0 0 0"></a-camera>
       <!-- <a-entity
@@ -49,9 +55,9 @@
       
       <a-entity id="walls" src=""></a-entity>
       
-      <a-grid id="ground" static-body></a-grid>
+      <!-- <a-grid id="ground" static-body></a-grid> -->
       
-      <a-light type="ambient" color="#ccc"></a-light>
+      <!-- <a-light type="ambient" color="#ccc"></a-light> -->
       
       
     </a-scene>
