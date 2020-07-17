@@ -18,10 +18,17 @@
   <body>
 
     <a-scene environment="preset:forest">
-      <a-sphere></a-sphere>
+    
       <a-sky id="sky" color="lightblue"></a-sky>
     </a-scene>
 
+    <a-entity
+      id="player"
+      camera="user-height: 1.6"
+      universal-controls
+      kinematic-body
+    ></a-entity>
+
     
-  </body>
+  </body>s
 </html>
