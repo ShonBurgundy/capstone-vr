@@ -9,11 +9,8 @@
     <meta name="description" content="Now in 3D!">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v2.6.1/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
-
-    <script src="js/index.js"></script>
-    <script src="js/map.js"></script>
 
   
   </head>
@@ -21,9 +18,15 @@
 
     <a-scene environment="preset:forest"> <!-- environment="preset:forest" -->
 
-      <a-entity position="-1.5 1.5 19.5" rotation="0 0 0"></a-entity>
-      
+      <a-grid static-body></a-grid>
 
+      <a-entity id="player"
+        camera
+        universal-controls
+        kinematic-body
+        position="0 1.8 0">
+      </a-entity>
+        
       <a-assets>
         <img id="wall" src="img/wall.jpg">
       </a-assets>
@@ -31,30 +34,35 @@
       <a-box width="2" height="5" depth=".2"
         position="0 0 0"
         scale="1 1 1"
+        static-body
         src="img/wall.jpg">
       </a-box>
 
       <a-box width="2" height="5" depth=".2"
         position="0 0 2"
         scale="1 1 1"
+        static-body
         src="img/wall.jpg">
       </a-box>
 
       <a-box width="2" height="5" depth=".2"
         position="-2 0 0"
         scale="1 1 1"
+        static-body
         src="img/wall.jpg">
       </a-box>
 
       <a-box width="2" height="5" depth=".2"
         position="2 0 0"
         scale="1 1 1"
+        static-body
         src="img/wall.jpg">
       </a-box>
 
       <a-box width="2" height="5" depth=".2"
         position=".5 0 0"
         scale="1 1 1"
+        static-body
         src="img/wall.jpg">
       </a-box>
 
@@ -63,7 +71,7 @@
       
       <a-sky id="sky" color="lightblue"></a-sky>
       
-      <a-entity id="walls"></a-entity>
+      <a-entity id="walls" src="img/wall.jpg"></a-entity>
       
       <!-- <a-grid id="ground" static-body></a-grid> -->
       
@@ -71,6 +79,9 @@
       
       
     </a-scene>
+
+    <script src="js/index.js"></script>
+    <script src="js/map.js"></script>
     
     <!-- <a-entity
     id="player"
