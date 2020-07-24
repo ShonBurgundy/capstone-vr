@@ -22,6 +22,7 @@
       <!-- fog="type: linear; color: lightgrey; far: 16; near: 7" -->
 
       <a-assets>
+        <img id="floor" src="img/floor.jpg">
         <img id="wall" src="img/wall.jpg">
       </a-assets>
       
@@ -29,14 +30,12 @@
         id="player"
         camera
         universal-controls
-        kinematic-body
-        position="0 20 36.5">
+        kinematic-body>
       </a-entity>
     
       <a-grid
         id="ground" 
-        static-body
-        position="0 -0.1 0">
+        static-body>
       </a-grid>
       
       <a-entity id="walls"></a-entity>
@@ -46,110 +45,53 @@
       <a-light type="ambient" color="#ccc"></a-light>
 
 
-        <!--left wall -->
-        <a-box width="2" height="5" depth=".2"
-          rotation="0 90 0"
-          position="-1.5 1.5 19.5"
-          scale="4 1 1"
-          static-body
-          src="img/wall.jpg">
-        </a-box>
-
-        <a-box width="2" height="5" depth=".2"
-          rotation="0 0 0"
-          position="-1.5 1.5 37.5"
-          scale="20 3 1"
-          static-body
-          src="img/wall.jpg">
-        </a-box>
-
-    
-    
-      
-    
-      <a-box width="2" height="5" depth=".2"
-        position="0 0 0"
-        scale="1 1 1"
-        static-body
-        src="img/wall.jpg">
-      </a-box>
-
-      <a-box width="2" height="5" depth=".2"
-        position="0 1.5 2"
-        scale="4 1 1"
-        static-body
-        src="img/wall.jpg">
-      </a-box>
-
-      <a-box width="2" height="5" depth=".2"
-        position="-2 0 0"
-        scale="1 1 1"
-        static-body
-        src="img/wall.jpg">
-      </a-box>
-
-      <a-box width="2" height="5" depth=".2"
-        position="2 0 0"
-        scale="1 1 1"
-        static-body
-        src="img/wall.jpg">
-      </a-box>
-
-      <a-box width="2" height="5" depth=".2"
-        position=".5 0 0"
-        scale="1 1 1"
-        static-body
-        src="img/wall.jpg">
-      </a-box>
-      
-      
-      
-      
+     
     </a-scene>
 
     <script>
+
       document.querySelector('a-scene').addEventListener('render-target-loaded', () => {
-  const WALL_SIZE = 3;
-  const WALL_HEIGHT = 12;
-  const el = document.querySelector('#walls');
-  let playerPos;
+        const WALL_SIZE = 3;
+        const WALL_HEIGHT = 12;
+        const el = document.querySelector('#walls');
+        let playerPos;
 
-  for (let x = 0; x < map.height; x++) {
-    for (let y = 0; y < map.width; y++) {
+        for (let x = 0; x < map.height; x++) {
+          for (let y = 0; y < map.width; y++) {
 
-      const i = (y * map.width) + x;
-      const position = 
-        `${((x - (map.width / 2)) * WALL_SIZE)} 1.5 ${(y - (map.height / 2)) * WALL_SIZE}`;
+            const i = (y * map.width) + x;
+            const position = 
+              `${((x - (map.width / 2)) * WALL_SIZE)} 1.5 ${(y - (map.height / 2)) * WALL_SIZE}`;
 
-      console.log([x,y,i]);
+            console.log([x,y,i]);
 
 
-//>>>>>>>>>>>>>> IF MAP.DATA[I] == 1, CREATE A WALL <<<<<<<<<<<<<<<<
-      if (map.data[i] === 1) {
-        console.log(position);
-        let wall = document.createElement('a-box');
-        el.appendChild(wall);
+      //>>>>>>>>>>>>>> IF MAP.DATA[I] == 1, CREATE A WALL <<<<<<<<<<<<<<<<
+            if (map.data[i] === 1) {
+              console.log(position);
+              let wall = document.createElement('a-box');
+              el.appendChild(wall);
 
-        wall.setAttribute('width', WALL_SIZE);
-        wall.setAttribute('height', WALL_HEIGHT);
-        wall.setAttribute('depth', WALL_SIZE);
-        wall.setAttribute('color', '#fff');
-        wall.setAttribute('material', 'src: #wall');
-        wall.setAttribute('position', position);
-        wall.setAttribute('static-body', '');
-      }
+              wall.setAttribute('width', WALL_SIZE);
+              wall.setAttribute('height', WALL_HEIGHT);
+              wall.setAttribute('depth', WALL_SIZE);
+              wall.setAttribute('color', '#fff');
+              wall.setAttribute('material', 'src: #wall');
+              wall.setAttribute('position', position);
+              wall.setAttribute('static-body', '');
+            }
 
-      // >>>>>>>>>>>>>> PLAYER POSITION <<<<<<<<<<<<<<<<
-      if (map.data[i] === 2) {
-        playerPos = position;
-      } 
-      if (map.data[i] === 3) {
-        console.log(position);
-      }
-    }
-  }
-  document.querySelector('#player').setAttribute('position', playerPos);
-});
+            // >>>>>>>>>>>>>> PLAYER POSITION <<<<<<<<<<<<<<<<
+            if (map.data[i] === 2) {
+              playerPos = position;
+            } 
+            if (map.data[i] === 3) {
+              console.log(position);
+            }
+          }
+        }
+        document.querySelector('#player').setAttribute('position', playerPos);
+      });
 
     </script>
 
