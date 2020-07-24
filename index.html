@@ -16,9 +16,10 @@
   </head>
   <body>
 
-    <a-scene environment="preset:forest" static body> <!-- environment="preset:forest" -->
+    <a-scene> <!-- environment="preset:forest" -->
 
-      <a-grid 
+      <a-grid
+        id="ground" 
         static-body
         position="0 -0.1 0">
       </a-grid>
@@ -37,6 +38,7 @@
       </a-assets>
     
       <a-entity id="walls"></a-entity>
+      
     
       <a-box width="2" height="5" depth=".2"
         position="0 0 0"
@@ -46,8 +48,8 @@
       </a-box>
 
       <a-box width="2" height="5" depth=".2"
-        position="0 0 2"
-        scale="1 1 1"
+        position="0 1.5 2"
+        scale="4 1 1"
         static-body
         src="img/wall.jpg">
       </a-box>
@@ -86,5 +88,5 @@
     <script src="js/index.js"></script>
     <script src="js/map.js"></script>
     
-  </body>s
+  </body>
 </html>

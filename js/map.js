@@ -43,8 +43,16 @@ document.querySelector('a-scene').addEventListener('render-target-loaded', () =>
         wall.setAttribute('material', 'src: #wall; repeat: 2 2')
         wall.setAttribute('position', position);
         wall.setAttribute('static-body', '');
+      }
 
+      // >>>>>>>>>>>>>> PLAYER POSITION <<<<<<<<<<<<<<<<
+      if (map.data[i] === 2) {
+        playerPos = position;
+      } 
+      if (map.data[i] === 3) {
+        console.log(position);
       }
     }
   }
+  document.querySelector('#player').setAttribute('position', playerPos);
 });
