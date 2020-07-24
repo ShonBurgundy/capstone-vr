@@ -33,13 +33,14 @@ document.querySelector('a-scene').addEventListener('render-target-loaded', () =>
 
 //>>>>>>>>>>>>>> IF MAP.DATA[I] == 1, CREATE A WALL <<<<<<<<<<<<<<<<
       if (map.data[i] === 1) {
-        wall = document.createElement('a-box');
+        console.log(position);
+        let wall = document.createElement('a-box');
         el.appendChild(wall);
 
         wall.setAttribute('width', WALL_SIZE);
         wall.setAttribute('height', WALL_HEIGHT);
         wall.setAttribute('depth', WALL_SIZE);
-        wall.setAttribute('color', 'red');
+        wall.setAttribute('color', '#fff');
         wall.setAttribute('material', 'src: #wall');
         wall.setAttribute('position', position);
         wall.setAttribute('static-body', '');
