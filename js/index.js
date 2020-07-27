@@ -26,7 +26,7 @@ document.querySelector('a-scene').addEventListener('render-target-loaded', () =>
         wall.setAttribute('height', WALL_HEIGHT);
         wall.setAttribute('depth', WALL_SIZE);
         wall.setAttribute('color', '#fff');
-        wall.setAttribute('material', 'src: #wall');
+        wall.setAttribute('material', 'src: #wall; repeat: 1 1.5');
         wall.setAttribute('position', position);
         wall.setAttribute('static-body', '');
       }
