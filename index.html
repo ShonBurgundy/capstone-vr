@@ -12,21 +12,21 @@
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v2.6.1/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="js/map.js"></script>
+    
 
   
   </head>
   <body>
     
-    <a-scene > 
+    <a-scene fog="type: exponential; color: #B3B6B8; density: 0.35;"> 
       <!-- fog="type: exponential; color: #B3B6B8; density: 0.35;" -->
       <!-- environment="preset:forest"  -->
 
       <a-assets>
         <img id="grassfloor" src="img/grassfloor.jpg">
+        <img id="hedges" src="img/hedges.jpg">
         <img id="floor" src="img/floors.jpg">
         <img id="wall" src="img/wall.jpg">
-        <a-asset-item id="remains-o" src="img/remains/skeleton2.obj"></a-asset-item>
-        <a-asset-item id="remains-m" src="img/remains/skeleton2.mtl"></a-asset-item>
       </a-assets>
       
       <a-entity 
@@ -44,18 +44,12 @@
       </a-grid>
       
       <a-entity id="walls"></a-entity>
+
+      <!-- <a-entity id="balls" static-body></a-entity> -->
       
       <a-sky id="sky" color="skyblue"></a-sky>
       
       <a-light type="ambient" color="#ccc"></a-light>
-
-      <!--====== STARTING 3D MODEL ======-->
-      <a-obj-model 
-        src="#remains-o"
-        mtl="#remains-m"
-        position="-6 .01 19.5"
-        scale="0.5 0.5 0.5">
-      </a-obj-model>
 
       <!--====== STARTING ROOM FLOOR ======-->
       <a-plane
@@ -66,19 +60,33 @@
         material="src: #grassfloor; repeat: 4 4">
       </a-plane>
 
+      
+      <a-sphere
+        id="ball1"
+        color="red"
+        static-body
+        position="-6 3 12"
+        scale="0.5 0.5 0.5">
+      </a-sphere>
+
+      <a-sphere
+        id="ball2"
+        static-body
+        position="-15 3 12"
+        scale="0.5 0.5 0.5">
+      </a-sphere>
+
       <!--====== STARTING ROOM HOOP ======-->
       <a-entity
         geometry="
           primitive: torus;
           radius: 2.1;
           radiusTubular: 0.2;
-          segmentsTubular: 20;"
-        material="
-          color: #EAEFF2;
-          roughness: 0.1;
-          metalness: .8;"
+          segmentsTubular: 50;"
+        material="src: #hedges; repeat: 8 3"
         rotation="10 0 0"
-        position="-6 .2 17">
+        position="-6 .2 17"
+        text="START">
         <!-- <a-light 
           type="point" 
           color="ccc" 
@@ -101,7 +109,9 @@
 
 
     <!-- ====== JS SCRIPTS ====== -->
+    
     <script src="js/index.js"></script>
+    <script src="js/balls.js"></script>
     
     
   </body>

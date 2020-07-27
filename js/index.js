@@ -3,7 +3,10 @@
 document.querySelector('a-scene').addEventListener('render-target-loaded', () => {
   const WALL_SIZE = 3;
   const WALL_HEIGHT = 7;
+  // const BALL_SIZE = .5;
+  // const BALL_HEIGHT = .5;
   const el = document.querySelector('#walls');
+  // const ele = document.querySelector('#balls');
   let playerPos;
 
   for (let x = 0; x < map.height; x++) {
@@ -18,7 +21,6 @@ document.querySelector('a-scene').addEventListener('render-target-loaded', () =>
 
 //>>>>>>>>>>>>>> IF MAP.DATA[I] == 1, CREATE A WALL <<<<<<<<<<<<<<<<
       if (map.data[i] === 1) {
-        console.log(position);
         let wall = document.createElement('a-box');
         el.appendChild(wall);
 
@@ -30,6 +32,31 @@ document.querySelector('a-scene').addEventListener('render-target-loaded', () =>
         wall.setAttribute('position', position);
         wall.setAttribute('static-body', '');
       }
+
+      if (map.data[i] === 5) {
+        let wall = document.createElement('a-box');
+        el.appendChild(wall);
+
+        wall.setAttribute('width', WALL_SIZE);
+        wall.setAttribute('height', WALL_HEIGHT);
+        wall.setAttribute('depth', WALL_SIZE);
+        wall.setAttribute('color', '#fff');
+        wall.setAttribute('material', 'src: #hedges; repeat: 1 3');
+        wall.setAttribute('position', position);
+        wall.setAttribute('static-body', '');
+      }
+
+      // else if (map.data[i] === 4) {
+      //   let ball = document.createElement('a-sphere');
+      //   ele.appendChild(ball);
+
+      //   ball.setAttribute('width', BALL_SIZE);
+      //   ball.setAttribute('height',BALL_HEIGHT);
+      //   ball.setAttribute('depth', BALL_SIZE);
+      //   ball.setAttribute('color', 'black');
+      //   ball.setAttribute('position', position);
+      //   ball.setAttribute('static-body', '');
+      // }
 
       // >>>>>>>>>>>>>> PLAYER POSITION <<<<<<<<<<<<<<<<
       if (map.data[i] === 2) {
