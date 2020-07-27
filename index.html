@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- <link rel="stylesheet" href="main.css"> -->
     <title>VR Maze</title>
-    <meta name="description" content="Now in 3D!">
+    <meta name="Maze" content="Now in 3D!">
 
     <script src="https://aframe.io/releases/0.3.2/aframe.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v2.6.1/dist/aframe-extras.min.js"></script>
@@ -17,9 +17,9 @@
   </head>
   <body>
     
-    <a-scene fog="type: exponential; color: #B3B6B8; density: 0.35;"> 
+    <a-scene > 
+      <!-- fog="type: exponential; color: #B3B6B8; density: 0.35;" -->
       <!-- environment="preset:forest"  -->
-      <!-- fog="type: linear; color: lightgrey; far: 16; near: 7" -->
 
       <a-assets>
         <img id="floor" src="img/floor.jpg">
@@ -44,56 +44,33 @@
       
       <a-light type="ambient" color="#ccc"></a-light>
 
+      <a-entity
+        geometry="
+          primitive: torus;
+          radius: 2.1;
+          radiusTubular: 0.2;
+          segmentsTubular: 20;"
+        material="
+          color: #EAEFF2;
+          roughness: 0.1;
+          metalness: 2;"
+        rotation="10 0 0"
+        position="-6 .2 17">
+        <a-light type="point" color="ccc" position="-6 .2 17"></a-light>
+        <!-- <a-animation
+          attribute="rotation"
+          to="1 0.5 1"
+          direction="alternate"
+          dur="2000"
+          repeat="indefinite"
+          easing="linear">
+        </a-animation> -->
+      </a-entity>
+
 
      
     </a-scene>
 
-    <script>
-
-      document.querySelector('a-scene').addEventListener('render-target-loaded', () => {
-        const WALL_SIZE = 3;
-        const WALL_HEIGHT = 7;
-        const el = document.querySelector('#walls');
-        let playerPos;
-
-        for (let x = 0; x < map.height; x++) {
-          for (let y = 0; y < map.width; y++) {
-
-            const i = (y * map.width) + x;
-            const position = 
-              `${((x - (map.width / 2)) * WALL_SIZE)} 1 ${(y - (map.height / 2)) * WALL_SIZE}`;
-
-
-
-
-      //>>>>>>>>>>>>>> IF MAP.DATA[I] == 1, CREATE A WALL <<<<<<<<<<<<<<<<
-            if (map.data[i] === 1) {
-              console.log(position);
-              let wall = document.createElement('a-box');
-              el.appendChild(wall);
-
-              wall.setAttribute('width', WALL_SIZE);
-              wall.setAttribute('height', WALL_HEIGHT);
-              wall.setAttribute('depth', WALL_SIZE);
-              wall.setAttribute('color', '#fff');
-              wall.setAttribute('material', 'src: #wall');
-              wall.setAttribute('position', position);
-              wall.setAttribute('static-body', '');
-            }
-
-            // >>>>>>>>>>>>>> PLAYER POSITION <<<<<<<<<<<<<<<<
-            if (map.data[i] === 2) {
-              playerPos = position;
-            } 
-            if (map.data[i] === 3) {
-              console.log(position);
-            }
-          }
-        }
-        document.querySelector('#player').setAttribute('position', playerPos);
-      });
-
-    </script>
 
     <!-- ====== JS SCRIPTS ====== -->
     <script src="js/index.js"></script>
