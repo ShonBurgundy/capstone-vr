@@ -25,6 +25,7 @@
         <img id="grassfloor" src="img/grassfloor.jpg">
         <img id="floor" src="img/floors.jpg">
         <img id="wall" src="img/wall.jpg">
+        <a-asset-item id="remains" src="img/remains/scene.gltf"></a-asset-item>
       </a-assets>
       
       <a-entity 
@@ -40,6 +41,8 @@
         material="src: #floor; repeat: 40 40" 
         rotation="0 0 0">
       </a-grid>
+
+      <a-entity gltf-model="#remains"></a-entity>
       
       <a-entity id="walls"></a-entity>
       
@@ -47,6 +50,7 @@
       
       <a-light type="ambient" color="#ccc"></a-light>
 
+      <!--====== STARTING ROOM FLOOR ======-->
       <a-plane
         rotation="-90 0 0"
         position="-6 .01 19.5"
@@ -55,6 +59,7 @@
         material="src: #grassfloor; repeat: 4 4">
       </a-plane>
 
+      <!--====== STARTING ROOM HOOP ======-->
       <a-entity
         geometry="
           primitive: torus;
