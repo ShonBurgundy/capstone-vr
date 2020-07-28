@@ -1,6 +1,6 @@
 // require('aframe-extras');
 
-document.querySelector('a-scene').addEventListener('render-target-loaded', () => {
+document.querySelector('a-scene').addEventListener('loaded', () => {
   const WALL_SIZE = 3;
   const WALL_HEIGHT = 7;
   // const BALL_SIZE = .5;
