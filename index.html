@@ -29,7 +29,8 @@
         <img id="hedges" src="img/hedges.jpg">
         <img id="floor" src="img/floors.jpg">
         <img id="wall" src="img/wall.jpg">
-        <a-mixin id="font" text="bevelEnabled: true; bevelSize:0.0.5; bevelThickness:0.1"></a-mixin>
+        <img id="blood1" src="img/blood1.png">
+        <audio id="music" autoplay loop="true" src="audio/music.mp3">
       </a-assets>
       
       <a-entity 
@@ -38,7 +39,10 @@
         universal-controls
         kinematic-body>
       </a-entity>
+
+      <a-entity sound="src: #music"></a-entity>
     
+      <a-entity id="walls"></a-entity>
     
       <a-grid
         id="ground" 
@@ -47,7 +51,37 @@
         rotation="0 0 0">
        </a-grid>
   
-      <a-entity id="walls"></a-entity>
+       <!--====== BLOOD IMAGES ======-->
+       <a-entity>
+        <a-image 
+          src="#blood1"
+          position="-7.45 1 15"
+          rotation= "0 -90 0"
+          height="3" width="3">
+        </a-image>
+
+        <a-image 
+          src="#blood1"
+          position="-4.51 1 15"
+          rotation= "0 90 0"
+          height="3" width="3">
+        </a-image>
+
+        <a-image 
+          src="#blood1"
+          position="-7.45 1 7"
+          rotation= "0 -90 0"
+          height="3" width="3">
+        </a-image>
+
+        <a-image 
+          src="#blood1"
+          position="-1.51 1 6"
+          rotation= "0 90 0"
+          height="3" width="3">
+        </a-image>
+
+      </a-entity>
   
   <!-- <a-entity id="balls" static-body></a-entity> -->
   
@@ -64,12 +98,12 @@
         material="src: #grassfloor; repeat: 4 4">
       </a-plane>
 
-      <a-entity text="text: How does WebVR work?" material="color: #0f0" position="-6 1.5 19.5" rotation="290 20 0" mixin="font"></a-entity>
+      
 
       <a-entity 
         material="fog: false">
         <a-entity
-        position="-10 1 22"
+        position="-10 1.5 22"
         position="-2 1 22"
         position="-2 1 17"
         position="-10 1 17"></a-entity>
