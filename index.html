@@ -19,17 +19,24 @@
   </head>
   <body>
     
-    <a-scene id="scene" fog="type: exponential; color: #B3B6B8; density: 0.35;"> 
+    <a-scene id="scene" fog="type: exponential; color: #B3B6B8; density: 0.35;" > 
       <!-- fog="type: exponential; color: #B3B6B8; density: 0.35;" -->
       <!-- environment="preset:forest"  -->
 
       
       <a-assets>
         <img id="grassfloor" src="img/grassfloor.jpg">
+        <img id="vines1" src="img/vines.png">
         <img id="hedges" src="img/hedges.jpg">
         <img id="floor" src="img/floors.jpg">
         <img id="wall" src="img/wall.jpg">
+        <!-- BLOOD ASSETS -->
         <img id="blood1" src="img/blood1.png">
+        <img id="blood2" src="img/blood2.png">
+        <img id="pentagram" src="img/pentagram.png">
+        <!-- WINNER ASSET -->
+        <img id="winner" src="img/winner.png">
+        <!-- MUSIC ASSET -->
         <audio id="music" autoplay loop="true" src="audio/music.mp3">
       </a-assets>
       
@@ -51,15 +58,27 @@
         rotation="0 0 0">
        </a-grid>
   
-       <!--====== BLOOD IMAGES ======-->
        <a-entity>
+
+        <!-- WINNER IMAGE -->
+        <a-image
+          src="#winner"
+          position="24 2.5 -34"
+          rotation="0 0 0"
+          height="4" width="4">
+        </a-image>
+
+
+         <!--====== BLOOD IMAGES ======-->
+          <!-- BLOOD 1 LEFT & RIGHT WALLS -->
+          <!-- FIRST NORTH HALL WAY -->
         <a-image 
           src="#blood1"
           position="-7.45 1 15"
           rotation= "0 -90 0"
           height="3" width="3">
         </a-image>
-
+       
         <a-image 
           src="#blood1"
           position="-4.51 1 15"
@@ -74,6 +93,31 @@
           height="3" width="3">
         </a-image>
 
+    
+
+        <!-- ROUNDABOUT LEFT SIDE AFTER FIST NORTH HALLWAY -->
+        <a-image 
+          src="#blood1"
+          position="-7.45 1 -3"
+          rotation= "0 -90 0"
+          height="3" width="3">
+        </a-image>
+
+        <a-image 
+          src="#blood1"
+          position="-7.44 1 -4.5"
+          rotation= "0 -90 0"
+          height="3" width="3">
+        </a-image>
+
+        <a-image 
+          src="#blood1"
+          position="-7.45 1 -6"
+          rotation= "0 -90 0"
+          height="3" width="3">
+        </a-image>
+
+        <!-- OTHERBLOOD -->
         <a-image 
           src="#blood1"
           position="-1.51 1 6"
@@ -81,6 +125,122 @@
           height="3" width="3">
         </a-image>
 
+        <a-image 
+          src="#blood1"
+          position="-1.51 1 0"
+          rotation= "0 90 0"
+          height="3" width="3">
+        </a-image>
+
+        <!-- BLOOD 2 NORTH & SOUTH WALLS -->
+        <!-- FIRST NORTH HALLWAY DIRECT RIGHT -->
+        <a-image 
+          src="#pentagram"
+          position="-1.5 2.1 -4.47"
+          rotation= "0 0 0"
+          height="4" width="4">
+        </a-image>
+        <!-- TO RIGHT AROUND PENTA CORNER -->
+        <a-image 
+          src="#blood2"
+          position="1.52 1 -6"
+          rotation= "0 90 0"
+          height="3" width="3">
+        </a-image>
+        
+        <a-image 
+          src="#blood2"
+          position="1.53 2.5 -6"
+          rotation= "0 90 0"
+          height="3" width="3">
+        </a-image> <!-- -->
+        <!-- -->
+
+        <a-image 
+          src="#blood2"
+          position="1.3 1.5 1.55"
+          rotation= "0 0 0"
+          height="4" width="4">
+        </a-image>
+
+        <a-image 
+          src="#blood2"
+          position=".5 1.5 1.6"
+          rotation= "0 0 0"
+          height="4" width="4">
+        </a-image>
+
+        <a-image 
+          src="#blood2"
+          position=".5 .01 2"
+          rotation= "-90 180 0"
+          height="4" width="4">
+        </a-image>
+
+        <!--  DIRECT LEFT FROM START -->
+        <a-image 
+          src="#blood2"
+          position="-9 1 10.52"
+          rotation= "0 0 0" 
+          height="3" width="3">
+        </a-image>
+
+        <a-image 
+          src="#blood1"
+          position="-9 0.01 10.75"
+          rotation= "-90 180 0"
+          height="4" width="4">
+        </a-image>
+
+        <a-image 
+          src="#blood2"
+          position="-17 1 10.52"
+          rotation= "0 0 0"
+          height="5" width="5">
+        </a-image>
+
+        <a-image 
+          src="#blood2"
+          position="-17 0.1 10.52"
+          rotation= "-90 180 0"
+          height="5" width="5">
+        </a-image>
+
+        <a-image 
+          src="#blood1"
+          position="-15.9 1 10.53"
+          rotation= "0 0 0"
+          height="4" width="4">
+        </a-image>
+
+        <!--====== VINE IMAGES ======-->
+        <a-image 
+          src="#vines1"
+          position="-6 1 17.75"
+          rotation= "0 0 0"
+          height="2.5" width="3">
+        </a-image>
+
+        <a-image 
+          src="#vines1"
+          position="-6 1 17.75"
+          rotation= "0 180 0"
+          height="2.5" width="3">
+        </a-image>
+
+        <a-image 
+          src="#vines1"
+          position="-6.8 .8 17.75"
+          rotation= "0 180 0"
+          height="2" width="2">
+        </a-image>
+
+        <a-image 
+          src="#vines1"
+          position="-5.1 .8 17.75"
+          rotation= "0 0 0"
+          height="2" width="2">
+        </a-image>
       </a-entity>
   
   <!-- <a-entity id="balls" static-body></a-entity> -->
