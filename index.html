@@ -19,7 +19,7 @@
   </head>
   <body>
     
-    <a-scene id="scene" fog="type: exponential; color: #B3B6B8; density: 0.35;" > 
+    <a-scene id="scene" > 
       <!-- fog="type: exponential; color: #B3B6B8; density: 0.35;" -->
       <!-- environment="preset:forest"  -->
 
@@ -72,12 +72,14 @@
          <!--====== BLOOD IMAGES ======-->
           <!-- BLOOD 1 LEFT & RIGHT WALLS -->
           <!-- FIRST NORTH HALL WAY -->
-        <a-image 
-          src="#blood1"
-          position="-7.45 1 15"
-          rotation= "0 -90 0"
-          height="3" width="3">
-        </a-image>
+        <a-entity> 
+          <a-image 
+            src="#blood1"
+            position="-7.45 1 15"
+            rotation= "0 -90 0"
+            height="3" width="3">
+          </a-image>
+        </a-entity> 
        
         <a-image 
           src="#blood1"
