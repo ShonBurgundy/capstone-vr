@@ -50,6 +50,7 @@ Make sure you have committed all changes to master branch. Then run:
 
 ## Known Bugs
 
+* _Music is picky about when it plays_
 * _Timer does not display on screen_
 * _Click to replay not working yet_
 * _Player can fall off map if they reach the end_
@@ -69,6 +70,12 @@ __seanbeloussow@yahoo.com
 
 ## Screenshots
 
+![Maze Layout](./img/maze1.png)
+![Maze Layout](./img/maze2.png)
+![Maze Layout](./img/maze3.png)
+![Maze Layout](./img/maze4.png)
+![Maze Layout](./img/maze5.png)
+![Maze Layout](./img/maze6.png)
 ![Maze Layout](./img/aerialmaze.png)
 
 
