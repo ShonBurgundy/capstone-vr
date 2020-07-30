@@ -6,10 +6,8 @@
 ## Description
 
 _A Virtual Reality Maze, which will let you move through the maze. Stretch Goals: Maze Timer, Mini Games._
-
-## Specs
-
-
+_Controls: W A S D; Mouse to look_
+_LIVE SITE COMING SOON_
 
 ## Setup/Installation Requirements
 

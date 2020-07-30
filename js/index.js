@@ -1,12 +1,8 @@
-// require('aframe-extras');
 
 document.querySelector('a-scene').addEventListener('loaded', () => {
   const WALL_SIZE = 3;
   const WALL_HEIGHT = 7;
-  // const BALL_SIZE = .5;
-  // const BALL_HEIGHT = .5;
   const el = document.querySelector('#walls');
-  // const ele = document.querySelector('#balls');
   let playerPos;
 
   for (let x = 0; x < map.height; x++) {
@@ -15,9 +11,6 @@ document.querySelector('a-scene').addEventListener('loaded', () => {
       const i = (y * map.width) + x;
       const position = 
         `${((x - (map.width / 2)) * WALL_SIZE)} 1 ${(y - (map.height / 2)) * WALL_SIZE}`;
-
-
-
 
 //>>>>>>>>>>>>>> IF MAP.DATA[I] == 1, CREATE A WALL <<<<<<<<<<<<<<<<
       if (map.data[i] === 1) {
@@ -46,18 +39,6 @@ document.querySelector('a-scene').addEventListener('loaded', () => {
         wall.setAttribute('static-body', '');
       }
 
-      // else if (map.data[i] === 4) {
-      //   let ball = document.createElement('a-sphere');
-      //   ele.appendChild(ball);
-
-      //   ball.setAttribute('width', BALL_SIZE);
-      //   ball.setAttribute('height',BALL_HEIGHT);
-      //   ball.setAttribute('depth', BALL_SIZE);
-      //   ball.setAttribute('color', 'black');
-      //   ball.setAttribute('position', position);
-      //   ball.setAttribute('static-body', '');
-      // }
-
       // >>>>>>>>>>>>>> PLAYER POSITION <<<<<<<<<<<<<<<<
       if (map.data[i] === 2) {
         playerPos = position;
@@ -69,22 +50,3 @@ document.querySelector('a-scene').addEventListener('loaded', () => {
   }
   document.querySelector('#player').setAttribute('position', playerPos);
 });
-
-// $ = (queryString) => document.querySelector(queryString);
-
-// const shiftHue = (hue) => (hue + 1) % 360;
-
-// let hue = 0;
-
-// const animate = () => {
-//   hue = shiftHue(hue);
-//   const color = `hsl(${hue}, 100%, 50%)`;
-//   $('a-sphere').setAttribute('color', color);
-
-//   const position = `0 ${1.5 + Math.sin(Date.now() / 1000)} -2`;
-//   $('a-sphere').setAttribute('position', position);
-//   requestAnimationFrame(animate);
-
-// };
-
-// requestAnimationFrame(animate);
