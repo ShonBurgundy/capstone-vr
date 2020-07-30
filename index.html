@@ -19,7 +19,7 @@
   </head>
   <body>
     
-    <a-scene id="scene" > 
+    <a-scene id="scene" fog="type: exponential; color: #B3B6B8; density: 0.38;"> 
       <!-- fog="type: exponential; color: #B3B6B8; density: 0.35;" -->
       <!-- environment="preset:forest"  -->
 
@@ -42,12 +42,12 @@
         <!-- WINNER ASSET -->
         <img id="winner" src="img/winner.png">
         <!-- MUSIC ASSET -->
-        <!-- <audio id="music" autoplay loop="true" src="audio/music.mp3"> -->
+        <audio id="music" autoplay loop="true" src="audio/music.mp3">
       </a-assets>
       
       <a-entity 
         id="player"
-        camera
+        camera="user-height: 1.6"
         universal-controls
         kinematic-body>
       </a-entity>
@@ -75,16 +75,13 @@
 
 
          <!--====== BLOOD IMAGES ======-->
-          <!-- BLOOD 1 LEFT & RIGHT WALLS -->
-          <!-- FIRST NORTH HALL WAY -->
-        <a-entity> 
-          <a-image 
-            src="#blood1"
-            position="-7.45 1 15"
-            rotation= "0 -90 0"
-            height="3" width="3">
-          </a-image>
-        </a-entity> 
+       
+        <a-image 
+          src="#blood1"
+          position="-7.45 1 15"
+          rotation= "0 -90 0"
+          height="3" width="3">
+        </a-image> 
        
         <a-image 
           src="#blood1"
@@ -248,13 +245,686 @@
         </a-image>
 
         <a-image 
-          src="#skeleton1"
-          position="-27.7 0.99 -28"
-          rotation= "0 38 0"
-          height="2" width="2">
-        </a-image>
+        src="#skeleton1"
+        position="-27.7 0.99 -28"
+        rotation= "0 38 0"
+        height="2" width="2">
+      </a-image>
+      
+      <a-image 
+        src="#blood1"
+        position="-7.52 1.2 -27.13"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
 
-        <a-image 
+      <a-image 
+        src="#blood1"
+        position="-7.52 1.2 -24.13"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+      
+      <a-image 
+        src="#blood2"
+        position="-16.52 1.2 -11"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-16.52 1.2 -18"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-10.52 1.2 -21.04"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-10.52 1.2 -15.01"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood3"
+        position="-10.52 1.2 -3"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-10.52 1.2 0"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-10.52 1.2 6"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-10.52 1.2 9"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-16.52 1.2 6"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-16.52 1.2 3"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-16.52 1.2 0"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood3"
+        position="-22.52 1.2 0"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-22.52 1.2 3"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood3"
+        position="-19.52 1.2 9"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-19.52 1.2 18"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-25.52 1.2 9"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-25.52 1.2 6"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-25.52 1.2 -6"
+        rotation= "0 90 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood3"
+        position="-21 1.2 -13.45"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <!--  -->
+      <a-image 
+        src="#blood2"
+        position="-9 1.2 -13.45"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-12 1.2 -4.45"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-19 1.2 -4.45"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-24 1.2 -4.45"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-24 1.2 -10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-27 1.2 -10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-12 1.2 -10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-6 1.2 -10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="3 1.2 -10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="6 1.2 -10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="9 1.2 -10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="21 1.2 -10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="24 1.2 -10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood3"
+        position="21 1.2 -4.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="6 1.2 -4.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-12 1.2 4.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-6 1.2 4.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-21 1.2 4.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-21 1.2 16.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-24 1.2 16.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-27 1.2 16.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="6 1.2 16.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="21 1.2 16.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="18 1.2 19.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="12 1.2 16.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <!-- REDRUM -->
+      <a-image 
+        src="#redrum"
+        position="18 2 7.52"
+        rotation= "0 0 0"
+        height="5" width="6">
+      </a-image>
+      <!-- REDRUM -->
+
+      <a-image 
+        src="#blood2"
+        position="24 1.2 1.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="18 1.2 -1.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="12 1.2 -1.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="18 1.2 -16.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="15 1.2 -16.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="12 1.2 -16.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="0 1.2 -16.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <!-- REDRUM -->
+      <a-image 
+        src="#redrum"
+        position="1.47 2 -1.52"
+        rotation= "0 0 0"
+        height="5" width="6">
+      </a-image>
+      <!-- REDRUM -->
+
+      <a-image 
+        src="#blood2"
+        position="6 1.2 -19.45"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood4"
+        position="24 1.2 -19.45"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="15 1.2 -28.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="12 1.2 -28.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="9 1.2 -28.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="6 1.2 -28.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <!-- PENTAGRAM -->
+      <a-image 
+        src="#pentagram"
+        position="21 1.2 -28.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+      <!-- PENTAGRAM -->
+
+      <a-image 
+        src="#blood2"
+        position="3 1.2 -16.53"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="6 1.2 -16.53"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-6 1.2 -16.53"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood4"
+        position="-9 1.2 -16.53"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-18 1.2 -16.53"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-21 1.2 -16.53"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-27 1.2 -16.53"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="21 1.2 -16.53"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="21 1.2 -7.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="18 1.2 -7.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood4"
+        position="6 1.2 -7.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="0 1.2 -7.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood3"
+        position="-10.6 1.2 -7.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood3"
+        position="-21 1.2 -7.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-24 1.2 -7.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-27 1.2 -1.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-21 1.2 -1.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-15 1.2 -1.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-6 1.2 -1.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="24 1.2 -1.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="21 1.2 4.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="18 1.2 4.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="6 1.2 4.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood3"
+        position="0 1.2 4.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="-24 1.2 4.42"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-21 1.2 13.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-24 1.2 13.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-27 1.2 13.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood3"
+        position="-18 1.2 13.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="-3 1.2 10.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="0 1.2 10.52"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood2"
+        position="21 1.2 10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <a-image 
+        src="#blood1"
+        position="18 1.2 10.46"
+        rotation= "0 0 0"
+        height="3" width="3">
+      </a-image>
+
+      <!-- BLOODY FLOOR BACK LEFT -->
+      <a-image 
           src="#blood1"
           position="-28.49 1.2 -14.8"
           rotation= "0 90 0"
@@ -309,11 +979,6 @@
           rotation= "90 0 0"
           height="4" width="4">
         </a-image>
-
-
-
-
-        <!--  -->
 
         <a-image 
           src="#blood2"
@@ -402,8 +1067,6 @@
         </a-image>
       </a-entity>
   
-  <!-- <a-entity id="balls" static-body></a-entity> -->
-  
       <a-sky id="sky" color="black"></a-sky>
   
       <a-light type="ambient" color="#ccc" intensity="0.7"></a-light>></a-light>
@@ -415,9 +1078,7 @@
         height="6"
         width="9"
         material="src: #grassfloor; repeat: 4 4">
-      </a-plane>
-
-      
+      </a-plane>  
 
       <a-entity 
         material="fog: false">
@@ -432,23 +1093,49 @@
         id="ball1"
         color="red"
         static-body
-        position="-2 .01 17"
-        scale="0.5 0.5 0.5">
-      </a-sphere>
-
-
-      <a-sphere
-        id="ball1"
-        color="red"
-        static-body
         position="-6 3 12"
         scale="0.5 0.5 0.5">
       </a-sphere>
       
       <a-sphere
-        id="ball2"
+        color="red"
         static-body
-        position="-15 3 12"
+        position="-19.5 3 12"
+        scale="0.5 0.5 0.5">
+      </a-sphere>
+
+      <a-sphere
+        color="red"
+        static-body
+        position="15 3 11.95"
+        scale="0.5 0.5 0.5">
+      </a-sphere>
+
+      <a-sphere
+        color="red"
+        static-body
+        position="15 3 -5.83"
+        scale="0.5 0.5 0.5">
+      </a-sphere>
+
+      <a-sphere
+        color="red"
+        static-body
+        position="7.89 3 -17.88"
+        scale="0.5 0.5 0.5">
+      </a-sphere>
+
+      <a-sphere
+        color="red"
+        static-body
+        position="-18.12 3 -21.63"
+        scale="0.5 0.5 0.5">
+      </a-sphere>
+
+      <a-sphere
+        color="red"
+        static-body
+        position="-18.12 3 -2.90"
         scale="0.5 0.5 0.5">
       </a-sphere>
     
