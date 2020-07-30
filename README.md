@@ -67,6 +67,10 @@ __seanbeloussow@yahoo.com
 * _Javascript_
 * _Git_
 
+## Screenshots
+
+![Maze Layout](./img/aerialmaze.png)
+
 
 ### Links
 [A-Frame](https://aframe.io/)
