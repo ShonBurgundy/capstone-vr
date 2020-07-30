@@ -7,7 +7,10 @@
 
 _A Virtual Reality Maze, which will let you move through the maze. Stretch Goals: Maze Timer, Mini Games._
 _Controls: W A S D; Mouse to look_
-_LIVE SITE COMING SOON_
+
+## Live Site
+
+https://silly-goldberg-3cd11c.netlify.app/
 
 ## Setup/Installation Requirements
 
