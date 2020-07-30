@@ -5,7 +5,7 @@
 
 ## Description
 
-_A Virtual Reality Maze, which will let you move trhough the maze. Stretch Goals: Maze Timer, Mini Games._
+_A Virtual Reality Maze, which will let you move through the maze. Stretch Goals: Maze Timer, Mini Games._
 
 ## Specs
 
@@ -50,7 +50,9 @@ Make sure you have committed all changes to master branch. Then run:
 
 ## Known Bugs
 
-No known bugs
+* _Timer does not display on screen_
+* _Click to replay not working yet_
+* _Player can fall off map if they reach the end_
 
 ## Support and contact details
 
